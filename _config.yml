@@ -9,7 +9,7 @@
 title: Brenno Ferrari
 email: brennoferrari@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Developer
+  Full-Stack/Mobile Developer
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://breferrari.github.io" # the base hostname & protocol for your site
 twitter_username: brennoferrari
