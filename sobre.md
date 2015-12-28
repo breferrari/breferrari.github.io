@@ -4,9 +4,6 @@ title: Sobre
 permalink: /sobre/
 ---
 
-Atualmente aluno de Análise e Desenvolvimento de Sistemas do Instituto INFNET no Rio de Janeiro.
-[infnet.edu.br](http://www.infnet.edu.br/)
+Atualmente aluno de Análise e Desenvolvimento de Sistemas do Instituto [INFNET](http://www.infnet.edu.br/) no Rio de Janeiro.
 
-Maiores informações em meu perfil do LinkedIn.
-
-[LinkedIn](https://br.linkedin.com/in/brennoferrari)
+Maiores informações em meu perfil do [LinkedIn](https://br.linkedin.com/in/brennoferrari).
