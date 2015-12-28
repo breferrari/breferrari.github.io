@@ -8,4 +8,5 @@ Atualmente aluno de Análise e Desenvolvimento de Sistemas do Instituto INFNET n
 [infnet.edu.br](http://www.infnet.edu.br/)
 
 Maiores informações em meu perfil do LinkedIn.
+
 [LinkedIn](https://br.linkedin.com/in/brennoferrari)
