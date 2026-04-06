@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://brennoferrari.com/sitemap.xml
