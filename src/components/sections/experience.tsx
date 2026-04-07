@@ -115,7 +115,7 @@ export function Experience() {
 
         <div className="relative flex flex-col">
           {/* Single continuous line through all entries */}
-          <div className="absolute left-[5.5px] top-0 bottom-0 w-px bg-warm/30" style={{ maskImage: "linear-gradient(to bottom, transparent, white 3%, white 97%, transparent)", WebkitMaskImage: "linear-gradient(to bottom, transparent, white 3%, white 97%, transparent)" }} />
+          <div className="absolute left-1.5 top-0 bottom-0 w-px bg-warm/30" style={{ maskImage: "linear-gradient(to bottom, transparent, white 3%, white 97%, transparent)", WebkitMaskImage: "linear-gradient(to bottom, transparent, white 3%, white 97%, transparent)" }} />
 
           {roles.map((role, i) => (
             <Reveal key={role.company} delay={i * 100} className="pb-10">
