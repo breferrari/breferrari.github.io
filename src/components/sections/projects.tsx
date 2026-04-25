@@ -27,9 +27,9 @@ const projects: Project[] = [
     repo: "breferrari/obsidian-mind",
     name: "Obsidian Mind",
     description:
-      "An Obsidian vault template that gives Claude Code persistent memory. AI coding assistants lose all context between sessions — Obsidian Mind fixes this by turning a vault into a structured, version-controlled external brain that persists across conversations. Five lifecycle hooks, a data-driven message classifier with CJK-aware regex, nine isolated subagents for heavy operations, QMD semantic search, self-healing graph rules, migration tooling, and 57 tests. Went viral in its first week — adopted across five languages and independently reshaped for domains beyond its original scope. Architecture later converged with Karpathy's LLM Wiki patterns.",
+      "An Obsidian vault that gives AI coding agents persistent memory across Claude Code, Codex CLI, and Gemini CLI. Coding agents lose all context between sessions — Obsidian Mind fixes this by turning a vault into a structured, version-controlled external brain that persists across conversations. Lifecycle hooks, a data-driven message classifier with CJK-aware regex, isolated subagents for heavy operations, QMD semantic search, self-healing graph rules, and migration tooling. Went viral in its first week and continued growing — adopted across five languages and independently reshaped for domains beyond its original scope. Architecture later converged with Karpathy's LLM Wiki patterns.",
     featured: true,
-    tags: ["Python", "Shell", "Obsidian", "Claude Code", "AI"],
+    tags: ["TypeScript", "Obsidian", "Claude Code", "Codex CLI", "Gemini CLI", "AI"],
   },
   {
     repo: "breferrari/weave",

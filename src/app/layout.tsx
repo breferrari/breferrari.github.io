@@ -19,7 +19,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Brenno Ferrari — Senior iOS Engineer | Berlin",
   description:
-    "Brenno Ferrari is a Senior iOS Engineer at Trade Republic in Berlin. Over a decade building mobile software across fintech, cybersecurity, e-commerce, fitness, real estate, energy, and financial regulation. Creator of Obsidian Mind (obsidian-mind, 1,200+ GitHub stars) and Weave (PackWeave), an MCP pack manager.",
+    "Brenno Ferrari is a Senior iOS Engineer at Trade Republic in Berlin. Over a decade building mobile software across fintech, cybersecurity, e-commerce, fitness, real estate, energy, and financial regulation. Creator of Obsidian Mind (obsidian-mind, 2,000+ GitHub stars) — persistent memory for Claude Code, Codex CLI, and Gemini CLI — and Weave (PackWeave), an MCP pack manager.",
   authors: [{ name: "Brenno Ferrari", url: "https://brennoferrari.com" }],
   creator: "Brenno Ferrari",
   metadataBase: new URL("https://brennoferrari.com"),
@@ -72,6 +72,8 @@ export const metadata: Metadata = {
     "PackWeave",
     "MCP",
     "Claude Code",
+    "Codex CLI",
+    "Gemini CLI",
     "AI developer tools",
     "mobile software engineer",
   ],
@@ -134,6 +136,9 @@ export default function RootLayout({
           "Mobile Software Engineering",
           "Developer Tooling",
           "AI Coding Assistants",
+          "Claude Code",
+          "Codex CLI",
+          "Gemini CLI",
           "Obsidian Mind",
           "obsidian-mind",
           "ObsidianMind",
@@ -155,7 +160,7 @@ export default function RootLayout({
         codeRepository: "https://github.com/breferrari/obsidian-mind",
         applicationCategory: "DeveloperApplication",
         operatingSystem: "Cross-platform",
-        programmingLanguage: ["Python", "Shell"],
+        programmingLanguage: ["TypeScript", "JavaScript"],
         author: { "@id": personId },
         creator: { "@id": personId },
         offers: {
@@ -165,8 +170,8 @@ export default function RootLayout({
           availability: "https://schema.org/InStock",
         },
         description:
-          "An Obsidian vault template that gives Claude Code persistent memory. Turns a vault into a structured, version-controlled external brain that persists across AI coding-assistant conversations. Five lifecycle hooks, a data-driven message classifier with CJK-aware regex, nine isolated subagents, QMD semantic search, self-healing graph rules, migration tooling, and 57 tests.",
-        keywords: "Obsidian, Claude Code, AI memory, MCP, developer tooling",
+          "An Obsidian vault that gives AI coding agents persistent memory across Claude Code, Codex CLI, and Gemini CLI. Turns a vault into a structured, version-controlled external brain that persists across coding-assistant conversations. Lifecycle hooks, a data-driven message classifier with CJK-aware regex, isolated subagents for heavy operations, QMD semantic search, self-healing graph rules, and migration tooling.",
+        keywords: "Obsidian, Claude Code, Codex CLI, Gemini CLI, AI memory, MCP, developer tooling",
       },
       {
         "@type": "SoftwareApplication",

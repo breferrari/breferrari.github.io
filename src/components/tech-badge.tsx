@@ -20,6 +20,8 @@ const techColors: Record<string, { dark: string; light: string }> = {
   // Tools & frameworks
   "Obsidian":          { dark: "#7C3AED", light: "#5a24b8" },
   "Claude Code":       { dark: "#D97706", light: "#a45a00" },
+  "Codex CLI":         { dark: "#10A37F", light: "#0a7558" },
+  "Gemini CLI":        { dark: "#4285F4", light: "#1a5dc9" },
   "AI":                { dark: "#6EC4E8", light: "#1a7a9e" },
   "MCP":               { dark: "#6EC4E8", light: "#1a7a9e" },
   "CLI":               { dark: "#A0A8BE", light: "#5a6074" },
