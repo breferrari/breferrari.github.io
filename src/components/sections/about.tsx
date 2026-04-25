@@ -3,7 +3,7 @@ import { Reveal } from "@/components/reveal";
 import { TechBadge } from "@/components/tech-badge-interactive";
 
 const primaryStack = ["Swift", "Objective-C"];
-const secondaryStack = ["Python", "TypeScript", "Rust", "Kotlin", "Ruby", "Java"];
+const secondaryStack = ["TypeScript", "Rust", "Python", "Kotlin", "Ruby", "Java"];
 const platforms = ["iOS", "iPadOS", "macOS", "tvOS", "visionOS", "Android", "Web"];
 
 export function About() {
