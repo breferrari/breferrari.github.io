@@ -3,6 +3,7 @@ import Script from "next/script";
 import { Space_Grotesk, Geist_Mono } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { ThemeProvider } from "@/components/theme-provider";
+import { WebVitals } from "@/components/web-vitals";
 import "./globals.css";
 
 const spaceGrotesk = Space_Grotesk({
@@ -161,7 +162,12 @@ export default function RootLayout({
         {children}
         </ThemeProvider>
       </body>
-      {gaId && <GoogleAnalytics gaId={gaId} />}
+      {gaId && (
+        <>
+          <GoogleAnalytics gaId={gaId} />
+          <WebVitals />
+        </>
+      )}
     </html>
   );
 }

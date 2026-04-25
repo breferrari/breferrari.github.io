@@ -12,6 +12,7 @@ import {
 import { Separator } from "@/components/ui/separator";
 import { Reveal } from "@/components/reveal";
 import { ExternalLink, Star } from "lucide-react";
+import { sendGAEvent } from "@next/third-parties/google";
 
 interface Project {
   repo: string;
@@ -119,6 +120,7 @@ export function Projects() {
                 href={`https://github.com/${project.repo}`}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => sendGAEvent("event", "project_click", { project: name })}
                 className="group block"
               >
               <Card

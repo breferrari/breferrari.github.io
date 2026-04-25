@@ -6,12 +6,13 @@ import { Reveal } from "@/components/reveal";
 import { Mail } from "lucide-react";
 import { GitHubIcon, LinkedInIcon, XIcon } from "@/components/icons";
 import { useTheme } from "@/components/theme-provider";
+import { sendGAEvent } from "@next/third-parties/google";
 
 const links = [
-  { label: "GitHub",   href: "https://github.com/breferrari",        icon: GitHubIcon,   light: "#24292e", dark: "#c8cad4" },
-  { label: "LinkedIn", href: "https://linkedin.com/in/brennoferrari", icon: LinkedInIcon, light: "#0a66c2", dark: "#5AA0D8" },
-  { label: "X",        href: "https://x.com/brennoferrari",          icon: XIcon,        light: "#14171a", dark: "#c8cad4" },
-  { label: "Email",    href: "mailto:contact@brennoferrari.com",      icon: Mail,         light: "#0e7490", dark: "#6EC4E8" },
+  { label: "GitHub",   channel: "github",   href: "https://github.com/breferrari",        icon: GitHubIcon,   light: "#24292e", dark: "#c8cad4" },
+  { label: "LinkedIn", channel: "linkedin", href: "https://linkedin.com/in/brennoferrari", icon: LinkedInIcon, light: "#0a66c2", dark: "#5AA0D8" },
+  { label: "X",        channel: "x",        href: "https://x.com/brennoferrari",          icon: XIcon,        light: "#14171a", dark: "#c8cad4" },
+  { label: "Email",    channel: "email",    href: "mailto:contact@brennoferrari.com",      icon: Mail,         light: "#0e7490", dark: "#6EC4E8" },
 ];
 
 export function Contact() {
@@ -38,6 +39,7 @@ export function Contact() {
               href={link.href}
               target={link.href.startsWith("mailto") ? undefined : "_blank"}
               rel="noopener noreferrer"
+              onClick={() => sendGAEvent("event", "contact_click", { channel: link.channel })}
               className="contact-link liquid-glass relative flex items-center gap-2 rounded-lg px-3.5 py-2 text-xs transition-all duration-300 hover:scale-105 hover:brightness-125"
               style={{
                 "--glass-tint": c.tint,
