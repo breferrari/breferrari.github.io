@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import Script from "next/script";
 import { Space_Grotesk, Geist_Mono } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
@@ -81,51 +81,102 @@ export const metadata: Metadata = {
   },
 };
 
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#f5f6fa" },
+    { media: "(prefers-color-scheme: dark)", color: "#0b0d14" },
+  ],
+  colorScheme: "dark light",
+  width: "device-width",
+  initialScale: 1,
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const personId = "https://brennoferrari.com/#person";
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Person",
-    name: "Brenno Ferrari",
-    url: "https://brennoferrari.com",
-    jobTitle: "Senior iOS Engineer",
-    worksFor: {
-      "@type": "Organization",
-      name: "Trade Republic",
-      url: "https://traderepublic.com",
-    },
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "Berlin",
-      addressCountry: "DE",
-    },
-    sameAs: [
-      "https://github.com/breferrari",
-      "https://linkedin.com/in/brennoferrari",
-      "https://x.com/brennoferrari",
-      "https://instagram.com/breferrari",
-    ],
-    knowsAbout: [
-      "iOS Development",
-      "Swift",
-      "macOS Development",
-      "Mobile Software Engineering",
-      "Developer Tooling",
-      "AI Coding Assistants",
-      "Obsidian Mind",
-      "obsidian-mind",
-      "ObsidianMind",
-      "Weave",
-      "PackWeave",
-      "Model Context Protocol",
-    ],
-    affiliation: [
+    "@graph": [
       {
-        "@type": "CollegeOrUniversity",
-        name: "Pontifícia Universidade Católica do Rio de Janeiro",
+        "@type": "Person",
+        "@id": personId,
+        name: "Brenno Ferrari",
+        givenName: "Brenno",
+        familyName: "Ferrari",
+        url: "https://brennoferrari.com",
+        image: "https://brennoferrari.com/og-image.png",
+        description:
+          "Senior iOS Engineer at Trade Republic in Berlin. Over a decade building mobile software across fintech, cybersecurity, e-commerce, fitness, real estate, energy, and financial regulation. Creator of Obsidian Mind and Weave.",
+        jobTitle: "Senior iOS Engineer",
+        worksFor: {
+          "@type": "Organization",
+          name: "Trade Republic",
+          url: "https://traderepublic.com",
+        },
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "Berlin",
+          addressCountry: "DE",
+        },
+        sameAs: [
+          "https://github.com/breferrari",
+          "https://linkedin.com/in/brennoferrari",
+          "https://x.com/brennoferrari",
+          "https://instagram.com/breferrari",
+        ],
+        knowsAbout: [
+          "iOS Development",
+          "Swift",
+          "macOS Development",
+          "Mobile Software Engineering",
+          "Developer Tooling",
+          "AI Coding Assistants",
+          "Obsidian Mind",
+          "obsidian-mind",
+          "ObsidianMind",
+          "Weave",
+          "PackWeave",
+          "Model Context Protocol",
+        ],
+        alumniOf: {
+          "@type": "CollegeOrUniversity",
+          name: "Pontifícia Universidade Católica do Rio de Janeiro",
+          url: "https://www.puc-rio.br",
+        },
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://brennoferrari.com/#obsidian-mind",
+        name: "Obsidian Mind",
+        url: "https://github.com/breferrari/obsidian-mind",
+        codeRepository: "https://github.com/breferrari/obsidian-mind",
+        applicationCategory: "DeveloperApplication",
+        operatingSystem: "Cross-platform",
+        programmingLanguage: ["Python", "Shell"],
+        author: { "@id": personId },
+        creator: { "@id": personId },
+        description:
+          "An Obsidian vault template that gives Claude Code persistent memory. Turns a vault into a structured, version-controlled external brain that persists across AI coding-assistant conversations. Five lifecycle hooks, a data-driven message classifier with CJK-aware regex, nine isolated subagents, QMD semantic search, self-healing graph rules, migration tooling, and 57 tests.",
+        keywords: "Obsidian, Claude Code, AI memory, MCP, developer tooling",
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://brennoferrari.com/#weave",
+        name: "Weave",
+        alternateName: "PackWeave",
+        url: "https://github.com/breferrari/weave",
+        codeRepository: "https://github.com/breferrari/weave",
+        applicationCategory: "DeveloperApplication",
+        operatingSystem: "Cross-platform",
+        programmingLanguage: "Rust",
+        author: { "@id": personId },
+        creator: { "@id": personId },
+        description:
+          "A Model Context Protocol pack manager for AI coding assistants. Install, update, and share MCP server configurations across Claude Code, Codex, and Gemini CLI with a single command. Built in Rust for performance and portability.",
+        keywords: "MCP, Model Context Protocol, Claude Code, Codex, Gemini CLI, Rust CLI",
       },
     ],
   };
