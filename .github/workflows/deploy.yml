@@ -26,6 +26,8 @@ jobs:
 
       - run: npm ci
       - run: npm run build
+        env:
+          NEXT_PUBLIC_GA_ID: ${{ secrets.GA_ID }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
