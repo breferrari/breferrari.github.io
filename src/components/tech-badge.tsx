@@ -25,6 +25,10 @@ const techColors: Record<string, { dark: string; light: string }> = {
   "AI":                { dark: "#6EC4E8", light: "#1a7a9e" },
   "MCP":               { dark: "#6EC4E8", light: "#1a7a9e" },
   "CLI":               { dark: "#A0A8BE", light: "#5a6074" },
+  "TUI":               { dark: "#2DD4BF", light: "#0d9488" },
+  "Package Manager":   { dark: "#F59E0B", light: "#b06800" },
+  "Template Engine":   { dark: "#A855F7", light: "#7c3aed" },
+  "Diff Engine":       { dark: "#84CC16", light: "#65A30D" },
   // ML/Data
   "Vision":            { dark: "#007AFF", light: "#0058c0" },
   "Core ML":           { dark: "#F05138", light: "#c0341e" },

@@ -14,11 +14,14 @@ import { Reveal } from "@/components/reveal";
 import { ExternalLink, Star } from "lucide-react";
 import { sendGAEvent } from "@next/third-parties/google";
 
+type ProjectStatus = "pre-release" | "experimental";
+
 interface Project {
   repo: string;
   name: string;
   description: string;
   featured?: boolean;
+  status?: ProjectStatus;
   tags: string[];
 }
 
@@ -32,12 +35,25 @@ const projects: Project[] = [
     tags: ["TypeScript", "Obsidian", "Claude Code", "Codex CLI", "Gemini CLI", "AI"],
   },
   {
+    repo: "breferrari/shardmind",
+    name: "ShardMind",
+    description:
+      "A package manager for Obsidian vault templates, distilled from the patterns that emerged after Obsidian Mind went viral. Solves the upgrade problem scaffolding tools (Cookiecutter, Yeoman, even Backstage at 30k+ stars) gave up on: a three-state model adapted from Terraform and chezmoi tracks which files the user has edited, so templates upgrade cleanly without overwriting hand-edits. Engine is agent-agnostic — shards ship for Claude Code, Codex CLI, or Gemini CLI. v0.1 in development.",
+    status: "pre-release",
+    tags: ["TypeScript", "Obsidian", "CLI", "TUI", "Package Manager", "Template Engine", "Diff Engine"],
+  },
+  {
     repo: "breferrari/weave",
     name: "Weave",
     description: "A Model Context Protocol pack manager for AI coding assistants. Install, update, and share MCP server configurations across Claude Code, Codex, and Gemini CLI with a single command. Built in Rust for performance and portability.",
     tags: ["Rust", "MCP", "CLI", "AI"],
   },
 ];
+
+const statusLabel: Record<ProjectStatus, string> = {
+  "pre-release": "Pre-release",
+  experimental: "Experimental",
+};
 
 function formatStars(count: number): string {
   if (count >= 1000) {
@@ -135,6 +151,11 @@ export function Projects() {
                     <CardTitle className="inline-flex items-center gap-1.5 transition-colors group-hover:text-warm">
                         {name}
                         <ExternalLink className="h-3.5 w-3.5" />
+                        {project.status && (
+                          <span className="rounded-md border border-foreground/15 bg-foreground/5 px-1.5 py-0.5 text-[0.65rem] font-normal uppercase tracking-wider text-muted-foreground">
+                            {statusLabel[project.status]}
+                          </span>
+                        )}
                     </CardTitle>
                     {count != null && (() => {
                       const tier = starTier(count);
