@@ -158,6 +158,12 @@ export default function RootLayout({
         programmingLanguage: ["Python", "Shell"],
         author: { "@id": personId },
         creator: { "@id": personId },
+        offers: {
+          "@type": "Offer",
+          price: "0",
+          priceCurrency: "USD",
+          availability: "https://schema.org/InStock",
+        },
         description:
           "An Obsidian vault template that gives Claude Code persistent memory. Turns a vault into a structured, version-controlled external brain that persists across AI coding-assistant conversations. Five lifecycle hooks, a data-driven message classifier with CJK-aware regex, nine isolated subagents, QMD semantic search, self-healing graph rules, migration tooling, and 57 tests.",
         keywords: "Obsidian, Claude Code, AI memory, MCP, developer tooling",
@@ -174,6 +180,12 @@ export default function RootLayout({
         programmingLanguage: "Rust",
         author: { "@id": personId },
         creator: { "@id": personId },
+        offers: {
+          "@type": "Offer",
+          price: "0",
+          priceCurrency: "USD",
+          availability: "https://schema.org/InStock",
+        },
         description:
           "A Model Context Protocol pack manager for AI coding assistants. Install, update, and share MCP server configurations across Claude Code, Codex, and Gemini CLI with a single command. Built in Rust for performance and portability.",
         keywords: "MCP, Model Context Protocol, Claude Code, Codex, Gemini CLI, Rust CLI",
