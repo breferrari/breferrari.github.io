@@ -25,6 +25,17 @@ interface Project {
   tags: string[];
 }
 
+// Order here is EDITORIAL and deliberate. Do not sort by stars.
+//
+// This page is closer to a CV than to a product directory, so the ranking is
+// what should be read first, not what is most popular. Sorting by star count
+// would put the newest work last until it accrues stars, which is backwards
+// for someone who keeps shipping: on the day vigia launched it would have sat
+// below a project with one more star than it.
+//
+// The list did look star-sorted until 2026-09-07, but only by coincidence, and
+// there has never been a sort in this file's history. If you are here because
+// the order looks "wrong", it is not. Reordering is an editorial decision.
 const projects: Project[] = [
   {
     repo: "breferrari/obsidian-mind",
