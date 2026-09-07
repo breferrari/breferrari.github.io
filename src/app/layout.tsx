@@ -19,7 +19,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Brenno Ferrari — Senior iOS Engineer | Berlin",
   description:
-    "Brenno Ferrari is a Senior iOS Engineer at Trade Republic in Berlin. Over a decade building mobile software across fintech, cybersecurity, e-commerce, fitness, real estate, energy, and financial regulation. Creator of Obsidian Mind (obsidian-mind, 2,000+ GitHub stars) — persistent memory for Claude Code, Codex CLI, and Gemini CLI — and Weave (PackWeave), an MCP pack manager.",
+    "Brenno Ferrari is a Senior iOS Engineer at Trade Republic in Berlin. Over a decade building mobile software across fintech, cybersecurity, e-commerce, fitness, real estate, energy, and financial regulation. Creator of Obsidian Mind (obsidian-mind, 4 GitHub stars to over 1,300 in its first ten days) — persistent memory for Claude Code, Codex CLI, and Gemini CLI — vigia, a live diff monitor for the terminal pane beside your coding agent, and Weave (PackWeave), an MCP pack manager.",
   authors: [{ name: "Brenno Ferrari", url: "https://brennoferrari.com" }],
   creator: "Brenno Ferrari",
   metadataBase: new URL("https://brennoferrari.com"),
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Brenno Ferrari — Senior iOS Engineer",
     description:
-      "Senior iOS Engineer at Trade Republic. Creator of Obsidian Mind (obsidian-mind) and Weave (PackWeave). Over a decade building mobile software across fintech, cybersecurity, e-commerce, fitness, real estate, energy, and financial regulation.",
+      "Senior iOS Engineer at Trade Republic. Creator of Obsidian Mind (obsidian-mind), vigia, ShardMind, and Weave (PackWeave). Over a decade building mobile software across fintech, cybersecurity, e-commerce, fitness, real estate, energy, and financial regulation.",
     type: "website",
     locale: "en_US",
     url: "https://brennoferrari.com",
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Brenno Ferrari — Senior iOS Engineer",
     description:
-      "Senior iOS Engineer at Trade Republic. Creator of Obsidian Mind (obsidian-mind) and Weave (PackWeave).",
+      "Senior iOS Engineer at Trade Republic. Creator of Obsidian Mind (obsidian-mind), vigia, ShardMind, and Weave (PackWeave).",
     creator: "@brennoferrari",
     images: ["https://brennoferrari.com/og-image.png"],
   },
@@ -67,6 +67,7 @@ export const metadata: Metadata = {
     "Obsidian Mind",
     "obsidian-mind",
     "ObsidianMind",
+    "vigia",
     "ShardMind",
     "Weave",
     "weave",
@@ -112,7 +113,7 @@ export default function RootLayout({
         url: "https://brennoferrari.com",
         image: "https://brennoferrari.com/og-image.png",
         description:
-          "Senior iOS Engineer at Trade Republic in Berlin. Over a decade building mobile software across fintech, cybersecurity, e-commerce, fitness, real estate, energy, and financial regulation. Creator of Obsidian Mind and Weave.",
+          "Senior iOS Engineer at Trade Republic in Berlin. Over a decade building mobile software across fintech, cybersecurity, e-commerce, fitness, real estate, energy, and financial regulation. Creator of Obsidian Mind, vigia, ShardMind, and Weave.",
         jobTitle: "Senior iOS Engineer",
         worksFor: {
           "@type": "Organization",
@@ -143,7 +144,8 @@ export default function RootLayout({
           "Obsidian Mind",
           "obsidian-mind",
           "ObsidianMind",
-          "ShardMind",
+          "vigia",
+    "ShardMind",
           "Weave",
           "PackWeave",
           "Model Context Protocol",

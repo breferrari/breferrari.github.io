@@ -35,6 +35,14 @@ const projects: Project[] = [
     tags: ["TypeScript", "Obsidian", "Claude Code", "Codex CLI", "Gemini CLI", "AI"],
   },
   {
+    repo: "breferrari/vigia",
+    name: "vigia",
+    description:
+      "A live diff monitor for the terminal pane beside a coding agent. Not a review tool you open per changeset: it is already open, follows the newest change with no input, and is cheap enough to leave running for a week. Its performance promises are budgets with tests behind them, gated in CI on macOS, Linux, and Windows so a regression past any of them fails the build — zero wakeups while idle, first paint under 50ms, frame time under 16ms at p99 while files are being written, and under 5% memory drift across 24 hours measured over a full day rather than estimated. Notes pin to a line of the diff and reach the agent over a stdio MCP server, so a comment goes back anchored to the file and the line it belongs to. Pure Rust with ratatui, gix, and syntect, and no C toolchain on any shipped target.",
+    featured: true,
+    tags: ["Rust", "TUI", "MCP", "Git", "Diff Engine", "AI"],
+  },
+  {
     repo: "breferrari/shardmind",
     name: "ShardMind",
     description:
