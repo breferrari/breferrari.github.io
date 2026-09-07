@@ -101,12 +101,17 @@ export function Projects() {
   const [stars, setStars] = useState<Record<string, number>>({});
 
   useEffect(() => {
+    const repos = projects.map((p) => p.repo);
     const cached = readCache();
-    if (cached) {
+    // Age is not enough: a cache written before a project was added covers only
+    // the old list, so a new project would show no star count until the TTL
+    // expired. Trust the cache only when it covers every repo currently listed.
+    if (cached && repos.every((repo) => repo in cached)) {
       setStars(cached);
       return;
     }
-    const repos = projects.map((p) => p.repo);
+    // Partial cache: render what is known immediately, then refresh the rest.
+    if (cached) setStars(cached);
     Promise.all(
       repos.map((repo) =>
         fetch(`https://api.github.com/repos/${repo}`)
