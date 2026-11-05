@@ -54,11 +54,17 @@ const projects: Project[] = [
     tags: ["Rust", "TUI", "MCP", "Git", "Diff Engine", "AI"],
   },
   {
+    repo: "breferrari/xcrew",
+    name: "xcrew",
+    description:
+      "Xcode's three MCP servers, Apple's Xcode MCP, MobileBuildMCP and Sosumi for the documentation, working as one crew inside Claude Code. The servers build and test; xcrew handles everything around a result. A failed run reaches the agent as its failures, where each one is, and the next step, read from the result bundle instead of the raw build output. A ledger follows which tests went red and back to green on the branch, `affected` names the tests a change can break, and `look` shows a failed UI test's last steps and its screen. A Swift CLI plus a Claude Code mod, tested against a public test bed of captured Xcode results.",
+    tags: ["Swift", "Xcode", "MCP", "Claude Code", "iOS", "AI"],
+  },
+  {
     repo: "breferrari/shardmind",
     name: "ShardMind",
     description:
-      "A package manager for Obsidian vault templates, distilled from the patterns that emerged after Obsidian Mind went viral. Solves the upgrade problem scaffolding tools (Cookiecutter, Yeoman, even Backstage at 30k+ stars) gave up on: a three-state model adapted from Terraform and chezmoi tracks which files the user has edited, so templates upgrade cleanly without overwriting hand-edits. Engine is agent-agnostic — shards ship for Claude Code, Codex CLI, or Gemini CLI. v0.1 in development.",
-    status: "pre-release",
+      "A package manager for Obsidian vault templates, distilled from the patterns that emerged after Obsidian Mind went viral. Solves the upgrade problem scaffolding tools (Cookiecutter, Yeoman, even Backstage at 30k+ stars) gave up on: a three-state model adapted from Terraform and chezmoi tracks which files the user has edited, so templates upgrade cleanly without overwriting hand-edits. Engine is agent-agnostic — shards ship for Claude Code, Codex CLI, or Gemini CLI. 1.0 shipped in October 2026.",
     tags: ["TypeScript", "Obsidian", "CLI", "TUI", "Package Manager", "Template Engine", "Diff Engine"],
   },
   {
