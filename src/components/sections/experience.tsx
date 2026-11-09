@@ -19,7 +19,7 @@ const roles: Role[] = [
     period: "2025 — present",
     location: "Berlin, Germany",
     description:
-      "German neobank serving 8+ million customers. Part of the iOS platform team at one of Europe's fastest-growing fintech companies.",
+      "European broker and fully licensed bank serving around ten million customers. Senior iOS Engineer on the Onboarding team, where every new market and every regulated identity flow passes through. Feature lead for the Belgium launch, coordinating iOS, Android and backend through to go-live. Took over KYC V2 as feature lead and delivered the cross-platform rebuild of the identity verification flow, built Child Savings Account onboarding from scratch, and delivered onboarding for Portugal, Poland and the Netherlands alongside an alphanumeric passcode, granular GDPR consent and device-bound keys against fraud.\n\nThe role kept reaching past iOS: backend fixes for tax ID validation and address precision across European markets, a revived shared validation rules repo aligning all three platforms, incident leadership, and the team's KYC observability. It was also the period where agentic engineering became the way of working: specs before code, several agents in parallel, production data, metrics and logs read in minutes, and every result questioned before it ships. The agents do the legwork; the judgment stays human.",
   },
   {
     company: "Nord Security / NordVPN",
